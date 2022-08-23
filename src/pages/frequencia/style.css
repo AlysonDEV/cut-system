@@ -1,0 +1,16 @@
+.freq-cadastros-ferramentas {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  justify-content: space-between;
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+select { 
+  margin-top: 0.5rem;
+  width: 100%;
+}

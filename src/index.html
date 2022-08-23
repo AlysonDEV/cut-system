@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta 
+      http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    >
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link href="./global.css" rel="stylesheet">
+
+    <title>Aincrad - Corte</title>
+
+  </head>
+  <body>
+    <div class="app" id="app-root">
+      <div id="bar-title" class="bar-title">
+        <div>
+          <img src="./assets/icon.png">
+          <span>Aincrad - Home</span>
+        </div>
+        <div class="buttons-windows">
+          <button 
+            class="button-minimize" 
+            id="button-minimize"
+            title="Minimizar"
+          >
+            -
+          </button>
+          <button 
+            class="button-maximize" 
+            id="button-maximize"
+            title="Maximizar/Restaurar"
+          >
+            +
+          </button>
+          <button 
+            class="button-close" 
+            id="button-close"
+            title="Fechar"
+          >
+            x
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <header class="content-header">
+          <img src="./assets/logo-vulcabras.png">
+          <div>
+            <button>Relatório</button>
+            <h1 id="namePage">Home</h1>
+            <div>
+              <span>Bem vindo(a)</span>
+              <span id="userName">Alyson Ronnan Martins</span>
+            </div>
+          </div>
+          <button id="button-close">Sair</button>
+          
+
+        </header>
+  
+        <aside class="content-aside">
+          <ul>
+            <li> Corte
+              <ul>
+                <li>Projeção</li>
+                <li>Leitura Corte</li>
+              </ul>
+            </li>
+            <li>Seigrafia</li>
+            <li><a href="./pages/frequencia/index.html">Frequência</a></li>
+            <li>Requisição</li>
+            <li><a href="./pages/secretary/index.html">Secretária</a></li>
+          </ul>
+          <div>Teste</div>
+        </aside>
+  
+        <main id="main" class="content-main ">
+          <div class="header">
+            Lista de arquivo na pasta atual:
+          </div>
+        </main>
+  
+        <footer class="content-footer">
+          <div>
+            informações
+          </div>
+          <div>
+            <span>06/08/2022 - 08:00:01</span>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./index.js"></script>
+  </body>
+</html>

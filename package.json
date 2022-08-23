@@ -1,0 +1,19 @@
+{
+  "name": "cut-system",
+  "version": "1.0.1",
+  "description": "Um projeto de mudanças para os projetos já criados.",
+  "main": "main.js",
+  "scripts": {
+    "start": "set APP_DEV=true&&electron .",
+    "build": "npx electron-packager . --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^6.1.12",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "firebase": "^9.9.3",
+    "node-adodb": "^5.0.3"
+  }
+}

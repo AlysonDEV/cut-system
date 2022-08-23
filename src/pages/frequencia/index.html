@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta 
+    http-equiv="Content-Security-Policy" 
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+  >
+  <meta
+    http-equiv="X-Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'"
+  />
+  <title>Cadastro de Ferramentas</title>
+  <link href="../../global.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app" id="app-root" style="border-radius: 8px 8px 0 0; background-color: #fff; padding: 1rem;">
+    <div style="margin-top: 26px;">
+      <a href="../../index.html">Voltar</a>
+    </div>
+    
+    <div class="freq-cadastros-ferramentas">
+      <div>
+        <div class="campo-cadastro">
+          <label for="modelo">Modelo</label>
+          <input type="text" id="modelo">
+          <button>Cadastrar</button>
+        </div>
+        <select id="listModelo" size="15" class="campo-lista">
+          <option>Aguardar...</option>
+        </select>
+      </div>
+
+      <div id="divFerramentas">
+        <div class="campo-cadastro">
+          <label for="ferramenta">Ferramentas</label>
+          <input type="text" id="ferramenta">
+          <button>Cadastrar</button>
+        </div>
+        <select id="listFerramenta" size="15" class="campo-lista">
+          <option>Aguardar...</option>
+        </select>
+      </div>
+
+      <div>
+        <div class="campo-cadastro">
+          <label for="tamanhos">Tamanhos</label>
+          <input type="text" id="tamanhos">
+          <button>Cadastrar</button>
+        </div>
+        <select size="13" class="campo-lista" id="listTamanhos">
+          <option>Aguardar...</option>
+        </select>
+        <div style="text-align: left;">
+          <p>Quantidade: <span id="total-tamanhos">0</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

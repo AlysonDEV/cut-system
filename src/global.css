@@ -1,0 +1,183 @@
+/* styles.css */
+:root {
+  --color-white: #ffffff;
+  --color-white-100: #fafafa;
+  --color-black: #000;
+  --color-gray: #999999;
+  --color-gray-100: #99999923;
+  --color-light-gray: #eeeeee;
+  --color-lighter-gray: #eeeeee;
+
+  --color-yellow-900: #c2c500;
+  --color-yellow-500: #f8fc01;
+  --color-green-900: #01975b;
+  --color-green-500: #00ff99;
+  --color-red-900: #ce0202;
+  --color-red-500: #ff0000;
+}
+html {
+  font-size: large;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
+  font-family: 'Calibri', sans-serif;
+  transition: color, background 1s;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+  border-radius: 4px;
+}
+a:hover {
+  background-color: var(--color-gray);
+  
+  transition: all 0.2s;
+}
+
+/* Classes */
+.hidden {
+  display: none;
+}
+
+.loader{
+  width: 100px;
+  margin: auto;
+}
+
+
+/* styles for windows bar*/
+.bar-title {
+  display: flex;
+  height: 1.5rem ;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-white-100);
+
+  color: var(--color-black);
+  font-family: 'arial', sans-serif;
+  font-size: 0.75rem;
+  padding: 0 0.40rem;
+
+  border-radius: 8px 8px 0 0;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+.bar-title div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-black);
+}
+.bar-title div img {
+  width: 1.1rem;
+  margin-right: 0.25rem;
+  border-radius: 50%;
+  user-select: none;
+}
+.bar-title div.buttons-windows {
+  user-select: all;
+  -webkit-user-select: auto;
+  -webkit-app-region: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* flex-direction: row; */
+  gap: 0.25rem;
+}
+.bar-title div.buttons-windows button {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: none;
+
+  transition: background-color 0.8s, box-shadow 0.2s;
+}
+.bar-title div.buttons-windows button:hover {
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  box-shadow: 0px 0px 10px 0.5px var(--color-gray);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+.bar-title div.buttons-windows button.button-minimize {
+  background-color: var(--color-yellow-500);
+  color: var(--color-yellow-500);
+}
+.bar-title div.buttons-windows button.button-minimize:hover {
+  background-color: var(--color-yellow-900);
+}
+.bar-title div.buttons-windows button.button-maximize {
+  background-color: var(--color-green-500);
+  color: var(--color-green-500);
+}
+.bar-title div.buttons-windows button.button-maximize:hover {
+  background-color: var(--color-green-900);
+}
+.bar-title div.buttons-windows button.button-close {
+  background-color: var(--color-red-500);
+  color: var(--color-red-500);
+}
+.bar-title div.buttons-windows button.button-close:hover {
+  background-color: var(--color-red-900);
+}
+
+
+.app div.content {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+  ;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto 80vh auto;
+  background: var(--color-white);
+}
+.app div.content .content-header {
+  grid-area: header;
+  background-image: linear-gradient(90deg, black,  blue) ;
+  color: var(--color-white);
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+.app div.content .content-header img {
+  height: 80%;
+  object-fit: fill;
+}
+.app div.content .content-header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app div.content .content-aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: space-between;
+  border-right: 1px solid var(--color-gray);
+  padding-left: 0.2rem;
+}
+.app div.content .content-aside div {
+  cursor: w-resize;
+  user-select: none;
+}
+.app div.content .content-main {
+  grid-area: main;
+  /* padding: 1rem; */
+}
+.app div.content .content-footer {
+  grid-area: footer;
+}
+
+
+
+/* Add styles here to customize the appearance of your app */
