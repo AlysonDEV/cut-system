@@ -3,12 +3,14 @@
   "version": "1.0.1",
   "description": "Um projeto de mudanças para os projetos já criados.",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "start": "set APP_DEV=true&&electron .",
     "build": "npx electron-packager . --overwrite"
   },
   "devDependencies": {
     "electron": "^6.1.12",
+    "electron-packager": "^16.0.0",
     "electron-reload": "^2.0.0-alpha.1"
   },
   "dependencies": {

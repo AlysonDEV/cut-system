@@ -14,3 +14,30 @@ select {
   margin-top: 0.5rem;
   width: 100%;
 }
+
+table {
+  display: block;
+}
+thead {
+  display: flex;
+  flex-direction: column;
+}
+tbody {
+  display: flex;
+  flex-direction: column;
+  height: 12.8rem;
+  overflow-y: scroll;
+  align-items: center;
+}
+tr {
+  width: 100%;
+  display: flex;
+  justify-content:space-around ;
+}
+tr:hover {
+  background-color: var(--color-gray-100);
+}
+
+th {
+  margin: 0 auto;
+}

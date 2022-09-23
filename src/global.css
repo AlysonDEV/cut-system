@@ -14,6 +14,8 @@
   --color-green-500: #00ff99;
   --color-red-900: #ce0202;
   --color-red-500: #ff0000;
+
+  --status-bar-height: 1.5rem;
 }
 html {
   font-size: large;
@@ -56,8 +58,10 @@ a:hover {
 
 /* styles for windows bar*/
 .bar-title {
+  z-index: 2;
+  /* position: absolute; */
   display: flex;
-  height: 1.5rem ;
+  height: var(--status-bar-height) ;
   justify-content: space-between;
   align-items: center;
   background: var(--color-white-100);

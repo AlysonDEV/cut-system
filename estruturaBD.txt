@@ -1,0 +1,57 @@
+-> Corte operador maquina
+Id
+Matricula
+Nome
+DataContratação
+
+-> Setores
+Setor
+
+
+-> Corte maquina
+Id
+Nome
+Setor
+
+
+-> Corte maquina produção
+Id
+Data
+Turno
+idMaquina
+idOperador
+Total produção pares
+Total inutilizado pares
+Total interferência pares
+CadastroAt
+
+
+-> Corte maquina produção
+idProdução
+Ordem
+Modelo (automático)
+Componente
+Hora
+ProdPares
+InutPares
+Motivo
+
+
+-> Corte interferência motivos
+id
+Setor
+Nome
+Descrição
+Area
+
+
+-> Corte interferência
+id
+idMaquina
+idOperador
+Início
+Final
+Motivo
+
+
+

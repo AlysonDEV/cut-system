@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta 
+      http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    >
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="../../components/toastify/toastify.css" />
+    <link rel="stylesheet" href="../../global.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Aincrad - Corte</title>
+
+  </head>
+  <body>
+    <div class="app" id="app-root">
+      <div id="formulario-cadastro">
+        <div id="formulario-cabecalho">
+          <label for="ordem">Ordem</label>
+          <input type="text" id="ordem" placeholder="Digite o numero da of">
+          <label for="cad-dt">Data</label>
+          <input type="text" id="data" value=''>
+          <label for="artigo">Artigo</label>
+          <input type="text" id="artigo">
+          <label for="modelo">Modelo</label>
+          <input type="text" id="modelo">
+          <label for="cor">Cor</label>
+          <input type="text" id="cor">
+          <label for="pares">Qtd</label>
+          <input type="text" id="qtd">
+          <hr style="margin: 1.5rem 0;">
+        </div>
+        <div id="formulario-itens">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Material</th>
+                <th>Cor</th>
+                <th>Espessura</th>
+                <th>Preço(m²)</th>
+                <th>Prev(m²)</th>
+                <th>Prev(R$)</th>
+                <th>Serv(m²)</th>
+                <th>Serv(R$)</th>
+                <th>Dif(m²)</th>
+                <th>Dif(R$)</th>
+              </tr>
+            </thead>
+            <tbody id="lista-materiais">
+
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../../components/template/templatePages.js"></script>
+    <script src="../../components/toastify/toastify.js"></script>
+    <script src="../../components/util.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -11,7 +11,6 @@ function delay(time) {
 }
 
 
-
 async function handleMatricula(e) {
   const matricula = e.target.value.replace(/\s/g, '');
   let dados = {}

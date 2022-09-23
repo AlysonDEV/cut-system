@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-console.log(process.env)
+// console.log(process.env)
 
 const { initializeApp } = require('firebase/app');
 const { getDatabase, ref, child, get } = require('firebase/database');
@@ -25,7 +25,7 @@ function handleModelo(e) {
 // Mostrar tamanhos
 function handleFerramentas(ferramenta) {
   const Modelo = document.querySelector("select.campo-lista").value
- 
+  getTamanhos(Modelo, ferramenta)
 
 
 }
@@ -145,7 +145,12 @@ async function getTamanhos(nameModel, nameTool){
             if (ferramenta.Nome === nameTool) {
             listTamanhos.innerHTML = ''
             ferramenta.Unidades.map(unidade => {
-              listTamanhos.innerHTML += `<option key="${unidade.Tamanho}">${unidade.Tamanho}}</option>`
+              listTamanhos.innerHTML += `
+              <tr id="${unidade.Tamanho}">
+                <td>${unidade.Tamanho}</td>
+                <td>${unidade.Qtd}</td>
+              </tr >
+              `
             })
           }
         })

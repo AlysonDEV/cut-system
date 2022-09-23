@@ -49,12 +49,20 @@
           <input type="text" id="tamanhos">
           <button>Cadastrar</button>
         </div>
-        <select size="13" class="campo-lista" id="listTamanhos">
-          <option>Aguardar...</option>
-        </select>
-        <div style="text-align: left;">
-          <p>Quantidade: <span id="total-tamanhos">0</span></p>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Tamanho</th>
+              <th>Quantidade</th>
+            </tr>
+          </thead>
+          <tbody id="listTamanhos">
+            <tr>
+              <td>Aguardar...</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
